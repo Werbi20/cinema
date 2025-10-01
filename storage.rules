@@ -1,0 +1,60 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // ============= FUNÇÕES AUXILIARES =============
+
+    // Verificar se o usuário está autenticado
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Verificar se é um tipo de arquivo de imagem válido
+    function isValidImageType() {
+      return request.resource.contentType.matches('image/.*');
+    }
+
+    // Verificar tamanho máximo (10MB)
+    function isValidSize() {
+      return request.resource.size < 10 * 1024 * 1024;
+    }
+
+    // ============= REGRAS ESPECÍFICAS =============
+
+    // Locações - leitura pública, escrita temporariamente pública para desenvolvimento
+    match /locations/{locationId}/{allPaths=**} {
+      allow read: if true; // Público para visualização
+      allow write: if isValidImageType() && isValidSize(); // Temporariamente público
+    }
+
+    // Projetos - acesso autenticado
+    match /projects/{projectId}/{allPaths=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && isValidImageType() && isValidSize();
+    }
+
+    // Usuários - apenas o próprio usuário
+    match /users/{userId}/{allPaths=**} {
+      allow read, write: if isAuthenticated() && request.auth.uid == userId
+                         && isValidImageType() && isValidSize();
+    }
+
+    // Uploads temporários (para processamento)
+    match /temp/{uploadId}/{allPaths=**} {
+      allow read, write: if isAuthenticated() && isValidImageType() && isValidSize();
+    }
+
+    // Uploads gerais - arquivos públicos temporários
+    match /uploads/{allPaths=**} {
+      allow read: if true; // Público para visualização
+      allow write: if isAuthenticated() && isValidImageType() && isValidSize();
+    }
+
+    // ============= REGRA PADRÃO =============
+
+    // Negar acesso por padrão a qualquer outro caminho
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

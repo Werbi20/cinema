@@ -1,0 +1,90 @@
+{
+  "users": {
+    "collection": "users",
+    "subcollections": [
+      "preferences",
+      "notifications"
+    ],
+    "indexes": [
+      "email",
+      "role",
+      "active"
+    ]
+  },
+  "projects": {
+    "collection": "projects",
+    "subcollections": [
+      "stages",
+      "tasks",
+      "locations"
+    ],
+    "indexes": [
+      "status",
+      "created_by",
+      "start_date",
+      "end_date"
+    ]
+  },
+  "locations": {
+    "collection": "locations",
+    "subcollections": [
+      "photos",
+      "visits",
+      "contracts"
+    ],
+    "indexes": [
+      "status",
+      "type",
+      "city",
+      "state",
+      "availability"
+    ]
+  },
+  "suppliers": {
+    "collection": "suppliers",
+    "subcollections": [
+      "contacts",
+      "contracts"
+    ],
+    "indexes": [
+      "type",
+      "status",
+      "city"
+    ]
+  },
+  "contracts": {
+    "collection": "contracts",
+    "subcollections": [
+      "payments",
+      "documents"
+    ],
+    "indexes": [
+      "status",
+      "start_date",
+      "end_date",
+      "location_id",
+      "project_id"
+    ]
+  },
+  "notifications": {
+    "collection": "notifications",
+    "subcollections": [],
+    "indexes": [
+      "user_id",
+      "read",
+      "created_at",
+      "type"
+    ]
+  },
+  "presentations": {
+    "collection": "presentations",
+    "subcollections": [
+      "items"
+    ],
+    "indexes": [
+      "project_id",
+      "created_at",
+      "status"
+    ]
+  }
+}

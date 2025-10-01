@@ -1,0 +1,2815 @@
+{
+  "users": {
+    "columns": [
+      {
+        "name": "email",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "full_name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "password_hash",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "role",
+        "type": "VARCHAR(11)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "bio",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(50)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "avatar_url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "preferences_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "timezone",
+        "type": "VARCHAR(50)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "locale",
+        "type": "VARCHAR(10)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "suppliers": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "tax_id",
+        "type": "VARCHAR(20)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(50)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "website",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "address_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "rating",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "tags": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "kind",
+        "type": "VARCHAR(8)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "color",
+        "type": "VARCHAR(7)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 1
+  },
+  "contract_templates": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "body_html",
+        "type": "TEXT",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "locale",
+        "type": "VARCHAR(10)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "variables_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "projects": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(9)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "client_name",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "budget_total",
+        "type": "FLOAT",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "budget",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "budget_spent",
+        "type": "FLOAT",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "budget_currency",
+        "type": "VARCHAR(3)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "exchange_rate_usd",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "exchange_rate_eur",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "start_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "end_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "manager_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "coordinator_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supervisor_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "responsibleUserId",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_public",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "settings_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "cover_photo_url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "presentations": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "criteria_json",
+        "type": "JSON",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "generated_by",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "token",
+        "type": "VARCHAR(100)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "token_expires_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "password_hash",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "theme",
+        "type": "VARCHAR(5)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "watermark_text",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "logo_url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "pdf_url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_public",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "saved_filters": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "owner_user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "scope",
+        "type": "VARCHAR(7)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "criteria_json",
+        "type": "JSON",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_default",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "sort_order",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "custom_filters": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "criteria_json",
+        "type": "JSON",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "scope",
+        "type": "VARCHAR(7)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "owner_user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_default",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "sort_order",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "color",
+        "type": "VARCHAR(7)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "icon",
+        "type": "VARCHAR(50)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "audit_log": {
+    "columns": [
+      {
+        "name": "actor_user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "entity",
+        "type": "VARCHAR(100)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "entity_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "action",
+        "type": "VARCHAR(17)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "before_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "after_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "ip_address",
+        "type": "VARCHAR(45)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "user_agent",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "session_id",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "notifications": {
+    "columns": [
+      {
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "message",
+        "type": "TEXT",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "type",
+        "type": "VARCHAR(7)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_read",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "action_url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "action_text",
+        "type": "VARCHAR(100)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "read_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "notification_settings": {
+    "columns": [
+      {
+        "name": "user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "email_notifications",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "push_notifications",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "sms_notifications",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "notification_types",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "project_stages": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "stage_type",
+        "type": "VARCHAR(15)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(11)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "order_index",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_sequential",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "planned_start_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "planned_end_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "actual_start_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "actual_end_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "budget_allocated",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "budget_spent",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "responsible_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "coordinator_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supervisor_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "settings_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "locations": {
+    "columns": [
+      {
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "slug",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "summary",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(16)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "responsible_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "coordinator_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supervisor_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "sector_type",
+        "type": "VARCHAR(11)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "price_day_cinema",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "price_hour_cinema",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "price_day_publicidade",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "price_hour_publicidade",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "currency",
+        "type": "VARCHAR(3)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "address_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "street",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "number",
+        "type": "VARCHAR(20)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "complement",
+        "type": "VARCHAR(100)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "neighborhood",
+        "type": "VARCHAR(100)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "city",
+        "type": "VARCHAR(100)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "state",
+        "type": "VARCHAR(50)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "country",
+        "type": "VARCHAR(100)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "postal_code",
+        "type": "VARCHAR(20)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supplier_name",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supplier_phone",
+        "type": "VARCHAR(50)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supplier_email",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "contact_person",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "contact_phone",
+        "type": "VARCHAR(50)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "contact_email",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "geo_point",
+        "type": "VARCHAR(100)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "space_type",
+        "type": "VARCHAR(9)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "capacity",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "area_size",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "power_specs",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "noise_level",
+        "type": "VARCHAR(50)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "acoustic_treatment",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "parking_spots",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "accessibility_features",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "availability_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "search_vector",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "meta_title",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "meta_description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "cover_photo_url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 3
+  },
+  "budget_adjustments": {
+    "columns": [
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "adjustment_type",
+        "type": "VARCHAR(50)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "amount",
+        "type": "FLOAT",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "currency",
+        "type": "VARCHAR(3)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "reason",
+        "type": "TEXT",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "justification",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(9)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "approved_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "approved_by",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "project_tasks": {
+    "columns": [
+      {
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(11)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "priority",
+        "type": "VARCHAR(20)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "due_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "completed_at",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "stage_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "assigned_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by_user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "estimated_hours",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "actual_hours",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "location_photos": {
+    "columns": [
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "filename",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "original_filename",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "file_path",
+        "type": "VARCHAR(500)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "thumbnail_path",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "storage_key",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "width",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "height",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "file_size",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "exif_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "caption",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "sort_order",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_primary",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "location_tags": {
+    "columns": [
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "tag_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "contracts": {
+    "columns": [
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "template_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(9)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "version",
+        "type": "VARCHAR(20)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "pdf_url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "signed_pdf_url",
+        "type": "VARCHAR(500)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "generated_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "sent_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "signed_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "expires_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "custom_data",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "presentation_items": {
+    "columns": [
+      {
+        "name": "presentation_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "sort_order",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "note",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "visits": {
+    "columns": [
+      {
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "etapa",
+        "type": "VARCHAR(14)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "start_datetime",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "end_datetime",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(9)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "responsible_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "coordinator_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "financial_movements": {
+    "columns": [
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "movement_type",
+        "type": "VARCHAR(13)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(9)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "amount",
+        "type": "FLOAT",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "currency",
+        "type": "VARCHAR(3)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "exchange_rate",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "reference",
+        "type": "VARCHAR(255)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "movement_date",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "approved_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "approved_by",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "tags",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "attachments",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "project_location_stages": {
+    "columns": [
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "stage_type",
+        "type": "VARCHAR(16)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(11)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "order_index",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_sequential",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_mandatory",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "planned_start_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "planned_end_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "actual_start_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "actual_end_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "completed_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "budget_allocated",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "budget_spent",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "responsible_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "coordinator_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "supervisor_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "settings_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "attachments_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "project_locations": {
+    "columns": [
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(9)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "rental_start_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "rental_end_date",
+        "type": "DATE",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "rental_start_time",
+        "type": "VARCHAR(10)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "rental_end_time",
+        "type": "VARCHAR(10)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "daily_rate",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "hourly_rate",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "total_days",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "total_hours",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "total_cost",
+        "type": "FLOAT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "currency",
+        "type": "VARCHAR(3)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "responsible_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "coordinator_user_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "special_requirements",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "equipment_needed",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "approved_by",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "approved_at",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "visit_participants": {
+    "columns": [
+      {
+        "name": "visit_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "user_id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "role",
+        "type": "VARCHAR(100)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "check_in_time",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "check_out_time",
+        "type": "DATETIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  },
+  "agenda_events": {
+    "columns": [
+      {
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "event_type",
+        "type": "VARCHAR(21)",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(11)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "event_date",
+        "type": "DATE",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "start_time",
+        "type": "TIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "end_time",
+        "type": "TIME",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "is_all_day",
+        "type": "BOOLEAN",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "project_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "location_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "project_location_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "visit_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "contract_id",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "metadata_json",
+        "type": "JSON",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "color",
+        "type": "VARCHAR(7)",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "priority",
+        "type": "INTEGER",
+        "not_null": 0,
+        "default": null,
+        "primary_key": 0
+      },
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "not_null": 1,
+        "default": null,
+        "primary_key": 1
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME",
+        "not_null": 1,
+        "default": "CURRENT_TIMESTAMP",
+        "primary_key": 0
+      }
+    ],
+    "record_count": 0
+  }
+}

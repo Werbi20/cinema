@@ -1,0 +1,97 @@
+{
+  "migration_results": {
+    "users": true,
+    "suppliers": true,
+    "tags": true,
+    "projects": true,
+    "locations": true,
+    "project_stages": true,
+    "project_tasks": true,
+    "contracts": true,
+    "location_photos": true,
+    "visits": true,
+    "notifications": true,
+    "presentations": true,
+    "financial_movements": true,
+    "audit_log": true,
+    "agenda_events": true
+  },
+  "verification": {
+    "users": {
+      "sqlite_count": 0,
+      "firestore_count": 5,
+      "match": false
+    },
+    "projects": {
+      "sqlite_count": 0,
+      "firestore_count": 5,
+      "match": false
+    },
+    "locations": {
+      "sqlite_count": 3,
+      "firestore_count": 9,
+      "match": false
+    },
+    "suppliers": {
+      "sqlite_count": 0,
+      "firestore_count": 5,
+      "match": false
+    },
+    "contracts": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "notifications": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "presentations": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "tags": {
+      "sqlite_count": 1,
+      "firestore_count": 1,
+      "match": true
+    },
+    "project_stages": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "project_tasks": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "location_photos": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "visits": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "financial_movements": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "audit_log": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    },
+    "agenda_events": {
+      "sqlite_count": 0,
+      "firestore_count": 0,
+      "match": true
+    }
+  },
+  "timestamp": "2025-09-19T01:06:14.911584"
+}

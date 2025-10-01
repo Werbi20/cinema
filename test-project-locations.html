@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste - Locações de Projetos</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .test-section {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .success {
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+      }
+      .error {
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+      }
+      .info {
+        background-color: #d1ecf1;
+        border-color: #bee5eb;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .result {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        white-space: pre-wrap;
+      }
+      .loading {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🧪 Teste - Sistema de Locações de Projetos</h1>
+
+      <div class="test-section info">
+        <h3>📋 Status do Sistema</h3>
+        <p>
+          Este teste verifica se a funcionalidade de adicionar locações aos
+          projetos está funcionando corretamente.
+        </p>
+      </div>
+
+      <div class="test-section">
+        <h3>🔍 Teste 1: Verificar Backend</h3>
+        <button onclick="testBackend()">Testar Backend</button>
+        <div id="backend-result" class="result"></div>
+      </div>
+
+      <div class="test-section">
+        <h3>📊 Teste 2: Listar Projetos</h3>
+        <button onclick="listProjects()">Listar Projetos</button>
+        <div id="projects-result" class="result"></div>
+      </div>
+
+      <div class="test-section">
+        <h3>📍 Teste 3: Listar Locações</h3>
+        <button onclick="listLocations()">Listar Locações</button>
+        <div id="locations-result" class="result"></div>
+      </div>
+
+      <div class="test-section">
+        <h3>🔗 Teste 4: Listar Locações de Projetos</h3>
+        <button onclick="listProjectLocations()">
+          Listar Locações de Projetos
+        </button>
+        <div id="project-locations-result" class="result"></div>
+      </div>
+
+      <div class="test-section">
+        <h3>➕ Teste 5: Criar Nova Locação de Projeto</h3>
+        <button onclick="createProjectLocation()">
+          Criar Locação de Projeto
+        </button>
+        <div id="create-result" class="result"></div>
+      </div>
+
+      <div class="test-section">
+        <h3>🎯 Teste 6: Teste Completo</h3>
+        <button onclick="runFullTest()">Executar Teste Completo</button>
+        <div id="full-test-result" class="result"></div>
+      </div>
+    </div>
+
+    <script>
+      const API_BASE = "http://127.0.0.1:8000/api/v1";
+
+      async function makeRequest(url, options = {}) {
+        try {
+          const response = await fetch(url, {
+            headers: {
+              "Content-Type": "application/json",
+              ...options.headers,
+            },
+            ...options,
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+
+          return await response.json();
+        } catch (error) {
+          throw new Error(`Erro na requisição: ${error.message}`);
+        }
+      }
+
+      async function testBackend() {
+        const resultDiv = document.getElementById("backend-result");
+        resultDiv.innerHTML =
+          '<span class="loading">🔄 Testando backend...</span>';
+
+        try {
+          const response = await makeRequest(`${API_BASE}/health`);
+          resultDiv.innerHTML = `<span class="success">✅ Backend funcionando!\n${JSON.stringify(
+            response,
+            null,
+            2
+          )}</span>`;
+        } catch (error) {
+          resultDiv.innerHTML = `<span class="error">❌ Erro no backend: ${error.message}</span>`;
+        }
+      }
+
+      async function listProjects() {
+        const resultDiv = document.getElementById("projects-result");
+        resultDiv.innerHTML =
+          '<span class="loading">🔄 Buscando projetos...</span>';
+
+        try {
+          const response = await makeRequest(`${API_BASE}/projects`);
+          resultDiv.innerHTML = `<span class="success">✅ Projetos encontrados: ${
+            response.length
+          }\n${JSON.stringify(response, null, 2)}</span>`;
+        } catch (error) {
+          resultDiv.innerHTML = `<span class="error">❌ Erro ao buscar projetos: ${error.message}</span>`;
+        }
+      }
+
+      async function listLocations() {
+        const resultDiv = document.getElementById("locations-result");
+        resultDiv.innerHTML =
+          '<span class="loading">🔄 Buscando locações...</span>';
+
+        try {
+          const response = await makeRequest(`${API_BASE}/locations`);
+          resultDiv.innerHTML = `<span class="success">✅ Locações encontradas: ${
+            response.length
+          }\n${JSON.stringify(response, null, 2)}</span>`;
+        } catch (error) {
+          resultDiv.innerHTML = `<span class="error">❌ Erro ao buscar locações: ${error.message}</span>`;
+        }
+      }
+
+      async function listProjectLocations() {
+        const resultDiv = document.getElementById("project-locations-result");
+        resultDiv.innerHTML =
+          '<span class="loading">🔄 Buscando locações de projetos...</span>';
+
+        try {
+          const response = await makeRequest(`${API_BASE}/project-locations`);
+          resultDiv.innerHTML = `<span class="success">✅ Locações de projetos encontradas: ${
+            response.length
+          }\n${JSON.stringify(response, null, 2)}</span>`;
+        } catch (error) {
+          resultDiv.innerHTML = `<span class="error">❌ Erro ao buscar locações de projetos: ${error.message}</span>`;
+        }
+      }
+
+      async function createProjectLocation() {
+        const resultDiv = document.getElementById("create-result");
+        resultDiv.innerHTML =
+          '<span class="loading">🔄 Criando locação de projeto...</span>';
+
+        try {
+          const newProjectLocation = {
+            project_id: 1,
+            location_id: 1,
+            status: "PENDING",
+            rental_start_date: "2024-09-15",
+            rental_end_date: "2024-09-20",
+            rental_start_time: "08:00:00",
+            rental_end_time: "18:00:00",
+            daily_rate: 500.0,
+            hourly_rate: 50.0,
+            total_days: 5,
+            total_hours: 50,
+            currency: "BRL",
+            responsible_user_id: 1,
+            coordinator_user_id: 2,
+            notes: "Teste de criação via script",
+            special_requirements: "Equipamento de som",
+            equipment_needed: "Microfones, caixas de som",
+          };
+
+          const response = await makeRequest(`${API_BASE}/project-locations`, {
+            method: "POST",
+            body: JSON.stringify(newProjectLocation),
+          });
+
+          resultDiv.innerHTML = `<span class="success">✅ Locação de projeto criada com sucesso!\n${JSON.stringify(
+            response,
+            null,
+            2
+          )}</span>`;
+        } catch (error) {
+          resultDiv.innerHTML = `<span class="error">❌ Erro ao criar locação de projeto: ${error.message}</span>`;
+        }
+      }
+
+      async function runFullTest() {
+        const resultDiv = document.getElementById("full-test-result");
+        resultDiv.innerHTML =
+          '<span class="loading">🔄 Executando teste completo...</span>';
+
+        let results = [];
+
+        try {
+          // Teste 1: Backend
+          try {
+            await makeRequest(`${API_BASE}/health`);
+            results.push("✅ Backend: OK");
+          } catch (error) {
+            results.push(`❌ Backend: ${error.message}`);
+          }
+
+          // Teste 2: Projetos
+          try {
+            const projects = await makeRequest(`${API_BASE}/projects`);
+            results.push(`✅ Projetos: ${projects.length} encontrados`);
+          } catch (error) {
+            results.push(`❌ Projetos: ${error.message}`);
+          }
+
+          // Teste 3: Locações
+          try {
+            const locations = await makeRequest(`${API_BASE}/locations`);
+            results.push(`✅ Locações: ${locations.length} encontradas`);
+          } catch (error) {
+            results.push(`❌ Locações: ${error.message}`);
+          }
+
+          // Teste 4: Locações de Projetos
+          try {
+            const projectLocations = await makeRequest(
+              `${API_BASE}/project-locations`
+            );
+            results.push(
+              `✅ Locações de Projetos: ${projectLocations.length} encontradas`
+            );
+          } catch (error) {
+            results.push(`❌ Locações de Projetos: ${error.message}`);
+          }
+
+          // Teste 5: Criar Nova Locação
+          try {
+            const newProjectLocation = {
+              project_id: 1,
+              location_id: 2,
+              status: "PENDING",
+              rental_start_date: "2024-09-25",
+              rental_end_date: "2024-09-30",
+              rental_start_time: "09:00:00",
+              rental_end_time: "17:00:00",
+              daily_rate: 600.0,
+              hourly_rate: 60.0,
+              total_days: 5,
+              total_hours: 40,
+              currency: "BRL",
+              responsible_user_id: 1,
+              coordinator_user_id: 2,
+              notes: "Teste completo via script",
+              special_requirements: "Iluminação especial",
+              equipment_needed: "Refletores, difusores",
+            };
+
+            const created = await makeRequest(`${API_BASE}/project-locations`, {
+              method: "POST",
+              body: JSON.stringify(newProjectLocation),
+            });
+            results.push(`✅ Criação: Locação criada com ID ${created.id}`);
+          } catch (error) {
+            results.push(`❌ Criação: ${error.message}`);
+          }
+
+          const successCount = results.filter((r) => r.startsWith("✅")).length;
+          const totalTests = results.length;
+
+          resultDiv.innerHTML = `<span class="${
+            successCount === totalTests ? "success" : "error"
+          }">
+                    🎯 Teste Completo: ${successCount}/${totalTests} testes passaram
+
+${results.join("\n")}
+                </span>`;
+        } catch (error) {
+          resultDiv.innerHTML = `<span class="error">❌ Erro no teste completo: ${error.message}</span>`;
+        }
+      }
+
+      // Executar teste automático ao carregar a página
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          runFullTest();
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
